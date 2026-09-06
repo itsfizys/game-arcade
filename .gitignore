@@ -1,0 +1,30 @@
+# Ignore untracked files by default. Keep only the files needed to run
+# Game Arcade and the workspace metadata it depends on.
+*
+
+# Public project documentation and workspace metadata
+!/.gitignore
+!/README.md
+!/.npmrc
+!/package.json
+!/pnpm-lock.yaml
+!/pnpm-workspace.yaml
+!/tsconfig.base.json
+!/vercel.json
+
+# The playable arcade
+!/game-arcade/
+!/game-arcade/**
+
+# Generated and local-only files
+/node_modules/
+**/node_modules/
+/.cache/
+/.local/
+/.conversation/
+/.agents/
+**/dist/
+**/*.tsbuildinfo
+**/*.log
+.DS_Store
+Thumbs.db

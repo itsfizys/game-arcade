@@ -1,0 +1,15 @@
+{
+  "name": "game-arcade",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) echo \"Use pnpm instead\" >&2; exit 1 ;; esac'",
+    "dev": "pnpm --filter @workspace/game-arcade run dev",
+    "build": "PORT=5173 BASE_PATH=/ pnpm --filter @workspace/game-arcade run build",
+    "typecheck": "pnpm --filter @workspace/game-arcade run typecheck"
+  },
+  "private": true,
+  "devDependencies": {
+    "typescript": "~5.9.3"
+  }
+}
